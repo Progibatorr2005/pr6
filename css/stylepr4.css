@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.active_menu__button{
+    border: none;
+    background: none;
+    position: absolute;
+    z-index: 1000;
+    margin: 23px 0 0 18px;
+    cursor: pointer;
+}
+
+.menu{
+    width: 320px;
+    height: 100vh;
+    top: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 7px 0px 8px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 7px 0px 8px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 0px 8px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: -320px;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu__header{
+    display:flex;
+    padding: 24px 24px 0;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.menu__main{
+    margin-top: 20px;
+    display: block;
+}
+
+.menu__main--button{
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.wand_menu{
+    width: 4px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 0 4px 4px 0;
+}
+
+.menu__main--button:hover{
+    cursor: pointer;
+    .wand_menu{
+        background-color: #41F6D7;
+    }
+    .menu__main--button p{
+        color: rgb(80, 80, 80);
+    }
+}
+
+.menu__main p{
+    margin: 0;
+    margin: auto 0;
+}
+
+.menu__footer{
+    position:absolute;
+    bottom:0;
+    margin-left: 24px;
+}
+
+.menu__footer--panel_button{
+    display: flex;
+    gap: 16px;
+}
+
+.menu__footer--switching-language{
+    display: flex;
+    gap: 7px;
+}
+
+.menu__footer--switching-language button{
+    border: none;
+    background: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.menu__footer--switching-language button:hover{
+    color: #626262;
+}
+
+.main__unit--active {
+    transition: all 0.3s;
+    transform: translateX(100%);
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  }
+
+
+ @media (min-width:1120px) {
+    .menu{
+        left: 0;
+        z-index: 0;
+    }
+    #close-menu{
+        display: none;
+    }
+}
